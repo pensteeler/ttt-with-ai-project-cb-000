@@ -18,6 +18,7 @@ class Game
      @player_2 = player_2
      @board = board
      @winningToken = ""
+     #start
    end
 
    def current_player
@@ -66,7 +67,7 @@ class Game
 
    def turn
 
-       #@board.display
+       @board.display
 
        player = current_player
        #print "\nCurrent player token:#{player.token}"
@@ -82,6 +83,7 @@ class Game
 
    def play
 
+     #start
      while !over?
        turn
      end
@@ -93,6 +95,7 @@ class Game
        winningMove = won?
        #puts "Congratulations #{@board.cells[winningMove[0]]}!"
        puts "Congratulations #{winner}!"
+       @board.display
      end
 
    end
